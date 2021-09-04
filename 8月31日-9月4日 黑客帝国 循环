@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+
+
+int main()
+{
+	
+	int line = 0;
+	printf("成为救世主\n");
+
+	while (line < 10000)
+	{
+		printf("打怪升级，经验+1\n");
+		line++;
+	}
+	printf("成为救世主了！\n");
+	return 0;
+
+}
