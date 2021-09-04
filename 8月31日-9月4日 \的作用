@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+
+
+int main()
+{
+	printf("c:\\test\\32\\test.c");//\t - 水平制表符（空格）
+	return 0;
+
+}
