@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+	char ch = 'w';
+	char* pc = &ch;
+	*pc = 'a';//指针，用a替换w，找到w
+	printf("%c\n", ch);
+	return 0;
+}
