@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+	typedef unsigned int u_int;//类型重定义 typedef
+	unsigned int num = 20;//让unsigned int 重命名为 u_int
+	u_int num2 = 20;
+
+return 0;
+
+}
