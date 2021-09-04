@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+
+int main()
+{
+	
+	int input = 0;
+	printf("尼奥：");
+	printf("你的选择是？（蓝色1，红色0）（1/0）>:");
+	scanf("%d", &input);
+	if (input == 1)
+		printf("从梦中醒来\n");
+	else
+		printf("找寻真相吧！\n");
+
+	return 0;
