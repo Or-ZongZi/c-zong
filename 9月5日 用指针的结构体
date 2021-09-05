@@ -1,0 +1,21 @@
+struct Book
+{
+	char name[20];//十万个为什么
+	short price;//50
+};
+
+int main()
+	{
+	
+	struct Book b1 = { "十万个为什么", 50 };
+	struct Book* pb = &b1;
+	//利用pb打印出书名和价格
+	//.  是结构体变量.成员
+
+	//-> 是结构体指针->成员
+
+	printf("%s\n", pb->name);
+	printf("%d\n", pb->price);
+	return 0;
+
+	}
