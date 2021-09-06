@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+
+	int num = 1;
+	if (5 == num)// == 是判断的意思
+		// = 是赋值
+	{
+		printf("打印\n");
+		}
+	return 0;
+}
