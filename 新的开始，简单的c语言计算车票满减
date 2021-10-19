@@ -1,0 +1,55 @@
+/* Note:Your choice is C IDE */
+#include "stdio.h"
+void main()
+
+{	
+	float kc=219.50,fj=537.00,hc=304.00,gt=626.50,dc=437.00;//定义全部车型的票价 
+	int sl1=2,sl2=3,sl3=5,sl4=0;//分别定义全部车票的数量 
+	float yf1,yf2,yf3,yf4;//定义每个车型的预付款 
+	float sj1,sj2,sj3,sj4;//定义每个车型实际售价 
+	float sjz;//定义总全部车型的车票实际售价 
+	printf("\n\t●   ●     北 京-上 海车票信息   ●   ●\n\n");//输出不同车型的车票单价 
+	printf("\t客车:%.2f元\n\n",kc); 
+	printf("\t飞机:%.2f元\n\n",fj);
+	printf("\t火车:%.2f元\n\n",hc);
+	printf("\t高铁:%.2f元\n\n",gt);
+	printf("\t动车:%.2f元\n\n",dc);
+	printf("\t乘客姓名:张小龙\n\n");//输出张小龙的预定车票数，单价，预付款 
+	printf("\t交通工具:客车\n\n");
+	printf("\t出发日期:2021-3-18\n\n");
+	yf1=kc*sl1;//计算张小龙的预付款 
+	printf("\t预定票数: %d张\t单张票价:%.1f元\t  预付款:%.2f元\n\n\n",sl1,kc,yf1);
+	printf("\t ●             \t ●\n\n");
+	printf("\t乘客姓名:赵玲玲\n\n");//输出赵玲玲的预定车票数，单价，预付款
+	printf("\t交通工具:飞机\n\n");
+	printf("\t出发日期:2021-4-5\n\n");
+	yf2=fj*sl2;//计算赵玲玲的预付款 
+	printf("\t预定票数: %d张\t单张票价:%.1f元\t  预付款:%.2f元\n\n",sl2,fj,yf2);
+	sj1=yf2>1000?yf2-((int)yf2/1000)*5:printf("祝您旅途愉快！");//计算并判断赵玲玲是否符合满减条件 
+	printf("\t车票支付款超过1000元享立减5元优惠,实际支付款:%.2f元\n\n",sj1);//输出实际支付款 
+	printf("\t ●             \t ●\n\n");
+	printf("\t乘客姓名:王楠\n\n");//输出王楠的预定车票数，单价，预付款
+	printf("\t交通工具:高铁\n\n");
+	printf("\t出发日期:2021-4-30\n\n");
+	yf3=gt*sl3;//计算王楠预付款 
+	printf("\t预定票数: %d张\t单张票价:%.1f元\t  预付款:%.2f元\n\n",sl3,gt,yf3);
+	sj2=yf3>2000?yf3-((int)yf3/500)*3:printf("祝您旅途愉快！");//计算并判断王楠是否符合满减条件
+	printf("\t车票支付款超过2000元享每满500-3元,实际支付款:%.2f元\n\n",sj2);//输出实际支付款 
+	printf("\t ●             \t ●\n\n");
+	printf("\t乘客姓名:周振\n\n");//输出周振的预定车票数，单价，预付款
+	printf("\t交通工具:动车\n\n");
+	printf("\t出发日期:2021-4-10\n\n");
+	yf4=dc*sl1;//计算周振预付款 
+	printf("\t预定票数: %d张\t单张票价:%.1f元\t  预付款:%.2f元\n\n",sl1,dc,yf4);
+	sj3=yf4>500?(int)yf4*(0.98):printf("祝您旅途愉快！");//计算并判断周振是否符合满减条件 
+	printf("\t车票支付款超过500元打9.8折,实际支付款:%.2f元\n\n\n",sj3);//输出实际支付款 
+	printf("\t●\t      北京-上海预售车票\t      \t●\n\n");//分别输出全部车型总预付款 
+	printf("\t客车:%d张\t付款:%.2f元\n\n",sl1,yf1); 
+	printf("\t飞机:%d张\t付款:%.2f元\n\n",sl2,sj1);
+	sj4=0;//定义火车车票数量 
+	printf("\t火车:%d张\t付款:%.2f元\n\n",sl4,sj4);
+	printf("\t高铁:%d张\t付款:%.2f元\n\n",sl3,sj2);
+	printf("\t动车:%d张\t付款:%.2f元\n\n",sl1,sj3);
+	sjz=yf1+sj1+sj4+sj2+sj3;//计算总预售车票总额 
+	printf("\t\t累计预售车票总额:%.2f元",sjz);//输出总预售车票总额 
+}
