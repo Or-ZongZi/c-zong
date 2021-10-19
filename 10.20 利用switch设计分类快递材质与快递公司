@@ -1,0 +1,67 @@
+/* Note:Your choice is C IDE */
+#include "stdio.h"
+void main()
+{	
+	float zl,dj;//定义总量，单价 
+	char cz;//定义物品，快递公司字符 
+	int sf=20,yt=12,cn=8;//定义快递公司运费价格 
+	printf("\n题目:输入邮寄货物重量、根据材、快递公司计算邮寄费用\n\n");
+	//提示输入物品重量 
+	printf("\t请输入货物重量（千克）:");
+	scanf("%f",&zl);
+	
+	//提示输入物品材质 
+	printf("\n\t请输入货物材质:");
+	scanf(" %c",&cz);
+	//根据定义的字符选择不同的材质，输出重量和单价 
+	switch(cz)
+	{	
+		
+		case 'Y':
+		dj=5.5;
+		printf("\n\t邮递商品材质:棉 邮寄重量:%.2f千克\t单价:%.2f元/千克",zl,dj);
+		break; 
+		
+		case 'W':
+		dj=3.2;
+		printf("\n\t邮递商品材质:纸 邮寄重量:%.2f千克\t单价:%.2f元/千克",zl,dj);
+		break;
+		
+		case 'J':
+		dj=15;
+		printf("\n\t邮递商品材质:纸 邮寄重量:%.2f千克\t单价:%.2f元/千克",zl,dj);
+		break;
+		 
+		default:
+		dj=4.1; 
+		printf("\n\t邮递商品材质:其他 邮寄重量:%.2f千克\t单价:%.2f元/千克",zl,dj);
+		break;  	
+	}
+	printf("\n\n请输入快递公司代号:");
+	//根据不同的快递公司输出不同的费用 
+	scanf(" %c",&cz);
+	switch(cz)
+	{	
+		case 'S':
+		case 's':
+		printf("\n\t本次邮递共需支付运费:%.2f元",zl*dj+sf);
+		break;
+		
+		case 'Y':
+		case 'y':
+		printf("\n\t本次邮递共需支付运费:%.2f元",zl*dj+yt);
+		break;
+		
+		case 'C':
+		case 'c':
+		printf("\n\t本次邮递共需支付运费:%.2f元",zl*dj+cn);
+		break;
+		
+		default: 
+		printf("输入错误");
+		break;
+	}
+	
+	
+
+}
