@@ -1,0 +1,57 @@
+/* Note:Your choice is C IDE */
+#include "stdio.h"
+void main()
+{	
+	int dx1=500,dx2=1000,dx3=500,dx4=250,dx5=128;//定义磁盘大小 
+	int nc1=2,nc2=8,nc3=4,nc4=2,nc5=2;//定义内存 
+	int bh1=1,bh2=2,bh3=3,bh4=1,bh5=2;//定义员工部门编号 
+	float zj1=3458.0,zj2=7999.0,zj3=4321.8,zj4=2735.0,zj5=1568.5;//定义配置总价
+	float zzc1,zzc2,zzc3;//定义三个部门总资产 
+	float allzc;//定义全部部门资产 
+	printf("\n\t\t\t\t   ●  ●   资  产  分  配   ●  ●\n\n");
+	printf("\t计算机编号  姓名    磁盘大小(G)  内存(G)  显卡\t      CPU\t购买时间 部门编号 配置总价(元)\n\n");
+	printf("\t C0001      赵敏丽  %d  \t %d   \t  2G集成显卡  i6520\t2014-5-20   %d \t    %.1f\n\n",dx1,nc1,bh1,zj1);//输出赵敏丽信息 
+	printf("\t C0002      周欣欣  %d  \t %d   \t  4G独显      i10523\t2020-3-18   %d \t    %.1f\n\n",dx2,nc2,bh2,zj2);//输出周欣欣信息
+	printf("\t C0003      杨国忠  %d  \t %d   \t  2G独显      AMD6523\t2017-10-15  %d \t    %.1f\n\n",dx3,nc3,bh3,zj3);//输出杨国忠信息
+	printf("\t C0004      冯耀龙  %d  \t %d   \t  2G集成显卡  i5235\t2010-8-29   %d \t    %.1f\n\n",dx4,nc4,bh4,zj4);//输出冯耀龙信息
+	printf("\t C0005      张国庆  %d  \t %d   \t  2G集成显卡  i3526\t2009-7-4    %d \t    %.1f\n\n\n",dx5,nc5,bh5,zj5);//输出张国庆信息
+	printf("\t1号部门资产分配情况\n\n");//输出1号部门信息 
+	printf("\t员工姓名:赵敏丽\n\n");
+	printf("\t磁盘大小:%dG\n\n",dx1);
+	printf("\t内存大小:%dG\n\n",nc1);
+	printf("\tCPU:i6520\n\n");
+	printf("\t配置总价:%.1f\n\n\n",zj1);
+	printf("\t员工姓名:冯耀龙\n\n");
+	printf("\t磁盘大小:%dG\n\n",dx4);
+	printf("\t内存大小:%dG\n\n",nc4);
+	printf("\tCPU:i5235\n\n");
+	printf("\t配置总价:%.1f\n\n",zj4);
+	zzc1=zj1+zj4;//计算部门1总资产 
+	printf("\t\t一号部门分配计算机资产总价值:%.2f元\n\n",zzc1);//输出1号部门总资产 
+	printf("\t****************************************************************\n\n");
+	printf("\t2号部门资产分配情况\n\n");//输出2号部门信息  
+	printf("\t员工姓名:周欣欣\n\n");
+	printf("\t磁盘大小:%d\n\n",dx2);
+	printf("\t内存大小:%dG\n\n",nc2);
+	printf("\tCPU:i10523\n\n");
+	printf("\t配置总价:%.1f\n\n\n",zj2);
+	printf("\t员工姓名:张国庆\n\n");
+	printf("\t磁盘大小:%dG\n\n",dx5);
+	printf("\t内存大小:%dG\n\n",nc5);
+	printf("\tCPU:i3526\n\n");
+	printf("\t配置总价:%.1f\n\n",zj5);
+	zzc2=zj2+zj5;//计算部门2总资产 
+	printf("\t\t二号部门分配计算机资产总价值:%.2f元\n\n",zzc2);//输出2号部门总资产
+	printf("\t****************************************************************\n\n");
+	printf("\t3号部门资产分配情况\n\n");//输出3号部门信息 
+	printf("\t员工姓名:杨国忠\n\n");
+	printf("\t磁盘大小:%dG\n\n",dx3);
+	printf("\t内存大小:%dG\n\n",nc3);
+	printf("\tCPU:AMD652\n\n");
+	printf("\t配置总价:%.1f\n\n",zj3);
+	zzc3=zj3;//计算部门3总资产 
+	printf("\t\t三号部门分配计算机资产总价值:%.2f元\n\n",zzc3);//输出3号部门总资产
+	allzc=zzc1+zzc2+zzc3;//计算三个部门的资产总和 
+	printf("\t全部分配计算机资产价值:%.2f",allzc);//输出三个部门资产总和 
+
+}
