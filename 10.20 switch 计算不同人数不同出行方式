@@ -1,0 +1,25 @@
+/* Note:Your choice is C IDE */
+#include "stdio.h"
+void main()
+{	int rs,fs;//定义人数，出行方式 
+	int fj=1880,hc=656;//定义飞机，火车的票价 
+	printf("\n\n\n\t\t敦煌旅游官网\n");
+	printf("请输入出游人数:");
+	//提示输入出行人数 
+	scanf("%d",&rs);
+	printf("\n请选择乘车方法\n");
+	printf("\t\t1.飞机\n");
+	printf("\t\t2.火车\n");
+	//提示输入出行方式 
+	scanf("%d",&fs);
+	//根据不同的出行方式，人数计算输出票价 
+	switch(fs)
+	{
+		case 1:	
+		printf("本次出行人数是%d人，乘车方式是飞机，共需支付费用%.2f元",rs,1.0*fj*rs);
+		break;
+		case 2:	
+		printf("本次出行人数是%d人，乘车方式是火车，共需支付费用%.2f元",rs,1.0*hc*rs);
+		break; 
+	}
+}
