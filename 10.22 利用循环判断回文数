@@ -1,0 +1,36 @@
+/* Note:Your choice is C IDE */
+#include "stdio.h"
+void main()
+{	
+	int a,b,p,y;
+	int sum=0;
+	printf("请输入一个数字:");
+	scanf("%d",&a);
+	p=a;
+	while(a!=0)
+	{
+		b=a%10;
+		printf("%d\t",b);
+		sum=sum*10+b;
+		y++;
+		a/=10;
+	}
+	if(y==5)
+	{
+			if(sum==p)
+		{
+			printf("是回文");
+		}
+			else
+		{
+			printf("不是回文");
+		}
+	}
+	else
+	{
+		printf("\n输入的数值不是五位数！");
+	}
+	
+	
+	
+}
