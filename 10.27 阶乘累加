@@ -1,0 +1,31 @@
+/* Note:Your choice is C IDE */
+#include "stdio.h"
+void main()
+{
+	int i,n;//定义输入值 
+	float sum=0;//定义累加器 
+	printf("请输入：");
+	scanf("%d",&n);
+	//判断n是否为正数 
+	if(n<=0)
+		{
+			printf("Error!");
+			
+		}
+	
+	else
+		{ 
+	//定义循环条件，步长
+		for(i=1;i<=n;i++)
+		{
+		
+			//累加器 
+			sum=sum+1.0*i/(i+1);
+		
+		
+		
+		} 
+		//输出结果 
+	printf("\n%.2f",sum+n);
+		}
+}
