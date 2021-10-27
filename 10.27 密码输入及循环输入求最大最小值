@@ -1,0 +1,78 @@
+/* Note:Your choice is C IDE */
+#include "stdio.h"
+#include "windows.h"
+void main()
+{
+	//定义循环初始值，口令值，编号值，销售量值，最大最小值，累加器 
+	int i,k,b,x,max,min,sum=0;
+	//设定循环初始值，条件，步长 
+	for(i=1;i<=3;i++)
+	{
+		
+		printf("\n\n\n\t\t\t请输入登录口令:");
+		scanf("%d",&k);
+		//判定密码是否有误 
+		if(k==123456)
+		{
+			
+			printf("口令输入正确，登录成功");
+			printf("\n\n\n\t\t====C语言趣味题====\n1.最值问题\n2.趣味数学");
+			printf("\n请输入功能编号:");
+			scanf("%d",&b);
+			//根据编号选择输出内容 
+			switch(b)
+			{
+				case 1:
+					printf("请输入10个月的销售量\n");
+					//设定销量输入循环，条件，步长 
+					for(i=1;i<=10;i++)
+					{
+						printf("请输入第%d个月的销售量:",i);
+						scanf("%d",&x);
+						//累加器 
+						sum=sum+x;
+						//判断是否为第一次输入 
+						if(i==1)
+						{
+							//将第一次输入的值赋值给max 
+							max=x;
+						}
+						//判定最大值 
+						if(max<x)
+						{
+							max=x;
+						}
+						//判定是否为第一次输入 
+						if(i==1)
+						{
+							//将第一次输入的值赋值给min 
+							min=x;
+						}
+						//判定最小值
+						if(min>x)
+						{
+							min=x;
+						}
+					}
+					//输出最大最小销量，平均值 
+					printf("\n去掉最高销售量%d，去掉最低销售量%d，平均销售量是%d",max,min,(sum-(max+min))/8);
+					break;
+					
+			}
+			
+			break; 
+		}
+		else
+		{
+			//判定输入错的次数 
+			if(i==3)
+			{
+				printf("\n口令输入有误，三次锁定，请联系管理员");
+				exit(0); 
+			}
+			printf("输入口令有误，请重新输入，您还有%d次机会",3-i);
+		} 
+	}
+	
+
+}
